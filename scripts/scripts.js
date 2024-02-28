@@ -42,9 +42,11 @@ async function loadFonts() {
 }
 function buildMagicTitleBlock(main) {
   const h1 = main.querySelector('h1');
-  const section = document.createElement('div');
-  section.append(buildBlock('magicTitle', { elems: [h1] }));
-  main.prepend(section);
+  if (h1) {
+    const section = document.createElement('div');
+    section.append(buildBlock('magicTitle', { elems: [h1] }));
+    main.prepend(section);
+  }
 
 }
 /**
