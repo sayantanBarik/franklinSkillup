@@ -40,16 +40,13 @@ async function loadFonts() {
     // do nothing
   }
 }
-
-function buildMagicTitleBlock(main)
-{
+function buildMagicTitleBlock(main) {
   const h1 = main.querySelector('h1');
   const section = document.createElement('div');
-    section.append(buildBlock('magicTitle', { elems: [h1] }));
-    main.prepend(section);
+  section.append(buildBlock('magicTitle', { elems: [h1] }));
+  main.prepend(section);
 
 }
-
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
