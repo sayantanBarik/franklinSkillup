@@ -41,15 +41,7 @@ async function loadFonts() {
     // do nothing
   }
 }
-function buildMagicTitleBlock(main) {
-  const h1 = main.querySelector('h1');
-  if (h1) {
-    const section = document.createElement('div');
-    section.append(buildBlock('magicTitle', { elems: [h1] }));
-    main.prepend(section);
-  }
 
-}
 /**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
@@ -57,7 +49,7 @@ function buildMagicTitleBlock(main) {
 function buildAutoBlocks(main) {
   try {
     buildHeroBlock(main);
-    buildMagicTitleBlock(main);
+    
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
