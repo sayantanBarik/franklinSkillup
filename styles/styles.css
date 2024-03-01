@@ -40,6 +40,10 @@
   /* nav height */
   --nav-height: 64px;
 }
+body.purple {
+  --background-color: #9370DB;
+  --text-color: #fff;
+}
 
 @font-face {
   font-family: roboto-fallback;
